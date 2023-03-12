@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(/static/assets/fonts/Montserrat-VariableFont_wght.ttf)
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+body {
+  background-image: url(/static/assets/images/night.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  object-position: center;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 50%;
+  min-width: 320px;
+  min-height: 320px;
+  background-color: #000;
+  opacity: .75;
+  border: 10px solid #000;
+  border-radius: 5%;
+}
+#login_form {
+  color: var(--text);
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 90%;
+  font-weight: 500;
+}
+
+input{
+  font-size: 1.75rem;
+  padding: 5px;
+}
+
+input[type="submit"]{
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 1;
+  transition: background-color .2s ease-in;
+}
+input[type="submit"]:hover{
+  background-color: rgb(150, 220, 12);
+  border: solid 1px black;
+}

@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #0d2350;
+  --secondary-color: #0971c9;
+  --tertiary-color: #6da8e2;
+  --text: #fffefd;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/static/assets/fonts/Montserrat-VariableFont_wght.ttf)
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
