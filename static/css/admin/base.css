@@ -1,12 +1,17 @@
 header {
   background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+  border-bottom: 5px solid var(--secondary-color);
 }
 
 div.container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px;
 }
 
@@ -40,4 +45,22 @@ li>a {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+section.container {
+  padding: 1rem;
+  background-color: var(--tertiary-color);
+  height: 90vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrapper>h3 {
+  color: var(--text);
+  font-size: 24px;
 }
