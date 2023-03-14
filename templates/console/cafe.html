@@ -1,7 +1,9 @@
 {{ define "content" }}
 <link rel="stylesheet" href="/static/css/admin/cafe.css">
-<section class="container">
-  <h1>CAFE</h1>
-  <h2>{{ .Cafe.BusinessName }}</h2>
-</section>
+<div class="container">
+  <div class="wrapper">
+    <img src="{{.Cafe.Logo}}" alt="logo">
+    <h2>{{ .Cafe.BusinessName }}</h2>
+  </div>
+</div>
 {{ end }}

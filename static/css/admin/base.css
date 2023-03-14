@@ -59,8 +59,10 @@ section.container {
   align-items: center;
   gap: 1rem;
 }
-
-.wrapper>h3 {
+.wrapper a{
+  text-decoration: none;
+}
+.wrapper h3{
   color: var(--text);
   font-size: 24px;
 }
