@@ -1,0 +1,36 @@
+{{ define "content" }}
+<link rel="stylesheet" href="/static/css/admin/category.css">
+<div class="container category">
+  <h1>Categories</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Active</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Category }}
+      <tr>
+        <td>{{ .Name }}</td>
+        <td><label class="switch">
+          {{ if eq .Active true }}
+          <input type="checkbox" checked>
+          {{ end }}
+          {{ if eq .Active false }}
+          <input type="checkbox">
+          {{ end }}
+          <span class="slider round"></span>
+        </label>
+      </td>
+      <td><button onclick='EditCategory("{{ .ID }}")'>Edit</button></td>
+      <td><button onclick='DeleteCategory("{{ .ID }}")'>Delete</button></td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+{{ end }}
