@@ -1,9 +1,38 @@
 {{ define "content" }}
 <link rel="stylesheet" href="/static/css/admin/cafe.css">
-<div class="container">
-  <div class="wrapper">
-    <img src="{{.Cafe.Logo}}" alt="logo">
+<div class="container cafe">
+  <div class="wrapper cafe first">
+    <img src="{{.Cafe.Logo}}" alt="logo" id="cafe-logo">
     <h2>{{ .Cafe.BusinessName }}</h2>
+    <h4><em>{{ .Cafe.Slogan }}</em></h4>
+  </div>
+  <div class="wrapper cafe">
+    <form action="/console/cafe" method="post" class="cafe">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+      <label for="logo">Logo</label>
+      <input type="file" name="logo" id="logo">
+      <label for="businessname">Business Name</label>
+      <input type="text" name="businessname" id="businessname">
+      <label for="slogan">Slogan</label>
+      <input type="text" name="slogan" id="slogan">
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email">
+      <label for="contact">Contact Number</label>
+      <input type="text" name="contact" id="contact">
+      <label for="address">Address</label>
+      <input type="text" name="address" id="address">
+      <label for="municipality">Municipality/City</label>
+      <input type="text" name="municipality" id="municipality">
+      <label for="province">Province</label>
+      <input type="text" name="province" id="province">
+      <label for="country">Country</label>
+      <input type="text" name="country" id="country">
+      <label for="zip">Zip Code</label>
+      <input type="text" name="zip" id="zip">
+      <input type="submit" value="Save">
+    </form>
   </div>
 </div>
+
 {{ end }}

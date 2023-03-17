@@ -1,5 +1,4 @@
 section.content {
-  /* background-color: var(--secondary-color); */
   height: 100%;
   color: var(--text);
   display: flex;
@@ -12,8 +11,10 @@ section.content {
 
 .card {
   border: 2px solid black;
-  width: 30vw;
-  height: 20vh;
+  min-width: 350px;
+  width: 400px;
+  min-height: 220px;
+  height: 250px;
 }
 
 .card-header {

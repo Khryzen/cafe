@@ -1,3 +1,67 @@
-div.container{
+div.container.cafe {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+  height: 100%;
+  align-content: stretch;
+}
+
+.wrapper img#cafe-logo {
+  height: auto;
+  width: 20vw;
+}
+
+.wrapper.cafe {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+.wrapper.cafe.first {
+  border-right: 2px solid black;
+  height: 100%;
+}
+
+.wrapper.cafe.first>h4 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+form.cafe {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+form.cafe>input {
+  padding: 2px;
+}
+
+label {
+  font-size: 24px;
+}
+
+input {
+  border: none;
+  transition: border-left .1s ease-in;
+  outline: none;
+  font-size: 18px;
+  padding: 2px;
+  height: 32px;
+}
+
+input:focus {
+  border-left: 10px solid var(--primary-color);
+  outline: none;
 }

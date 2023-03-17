@@ -51,6 +51,7 @@ section.container {
   padding: 1rem;
   background-color: var(--tertiary-color);
   height: 90vh;
+  overflow: auto;
 }
 
 .wrapper {
