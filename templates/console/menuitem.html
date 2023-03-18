@@ -1,0 +1,46 @@
+{{ define "content" }}
+<link rel="stylesheet" href="/static/css/admin/menuitems.css">
+<div class="container category">
+  <h1>Menu Items</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Picture</th>
+        <th></th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .MenuItem }}
+      <tr>
+        <td><input type="text" name="miname-{{ .ID }}" id="miname-{{ .ID }}" value="{{ .Name }}"></td>
+        <td><input type="text" name="midescription-{{ .ID }}" id="midescription-{{ .ID }}" value="{{ .Description }}"></td>
+        <td><img src="{{ .Picture }}" alt="Picture-{{ .ID }}"></td>
+        <td><input type="file" name="miimage-{{ .ID }}" id="miimage-{{ .ID }}"></td>
+        <td><input type="text" name="micategory-{{ .ID }}" id="micategory-{{ .ID }}" value="{{ .Category.Name }}"></td>
+        <td><input type="number" name="miprice-{{ .ID }}" id="miprice-{{ .ID }}" value="{{ .Price }}"></td>
+        <td><label class="switch">
+          {{ if eq .Active true }}
+          <input type="checkbox" checked>
+          {{ end }}
+          {{ if eq .Active false }}
+          <input type="checkbox">
+          {{ end }}
+          <span class="slider round"></span>
+        </label>
+      </td>
+      <td><button onclick='SaveCategory("{{ .ID }}")'>Save</button></td>
+      <td><button onclick='DeleteCategory("{{ .ID }}")'>Delete</button></td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+{{ end }}

@@ -21,6 +21,8 @@ func AdminHandler(w http.ResponseWriter, r *http.Request) {
 		context = AdminCafeHandler(w, r)
 	case "category":
 		context = AdminCategoryHandler(w, r)
+	case "menuitem":
+		context = AdminMenuItemHandler(w, r)
 	default:
 		page = "index"
 		context = AdminIndexHandler(w, r)

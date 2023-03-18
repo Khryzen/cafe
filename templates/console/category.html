@@ -14,7 +14,7 @@
     <tbody>
       {{ range .Category }}
       <tr>
-        <td>{{ .Name }}</td>
+        <td><input type="text" name="cname-{{ .ID }}" id="cname-{{ .ID }}" value="{{ .Name }}"></td>
         <td><label class="switch">
           {{ if eq .Active true }}
           <input type="checkbox" checked>
@@ -25,7 +25,7 @@
           <span class="slider round"></span>
         </label>
       </td>
-      <td><button onclick='EditCategory("{{ .ID }}")'>Edit</button></td>
+      <td><button onclick='SaveCategory("{{ .ID }}")'>Save</button></td>
       <td><button onclick='DeleteCategory("{{ .ID }}")'>Delete</button></td>
       </tr>
       {{ end }}
